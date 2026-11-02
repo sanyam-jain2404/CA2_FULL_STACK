@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import router from "./routes/studentRoutes.js";
 import connectDB from "./config/db.js";
 dotenv.config();
-connectDB();
+connectDB(process.env.MONGO_URI);
 const app=express();
 app.use(express.json());
 
